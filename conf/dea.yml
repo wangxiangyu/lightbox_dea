@@ -1,0 +1,35 @@
+# See src/lib/dea/config.rb for optional config values.
+
+# Base directory for dea, application directories, dea temp files, etc. are all relative to this.
+base_dir: /tmp/dea_ng
+
+logging:
+  file: /home/lightbox/warden/dea/log/dea.log
+
+resources:
+  memory_mb: 20480
+  memory_overcommit_factor: 2
+  disk_mb: 2048
+  disk_overcommit_factor: 2
+
+# The this flag determines whether or not this DEA should only host
+# production apps. (default: false)
+only_production_apps: false
+
+nats_uri: nats://lightbox:lightbox@10.50.33.25:4242/
+#nats_uri: nats://jacky:jacky@10.36.166.46:4242
+
+pid_filename: /home/lightbox/warden/dea/dea_ng.pid
+
+warden_socket: /home/lightbox/warden/warden/status/warden.sock
+
+evacuation_delay_secs: 10
+
+index: 0
+
+status:
+  port: 8091
+  user: test
+  password: test
+stacks: 
+  - CentOS_nginx
